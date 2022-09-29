@@ -1,5 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 /* The Modal (background) */
@@ -79,14 +80,13 @@ form {
     color: white;
     background-color: #1ac185;
     border: none;
-
     border-radius: 5px;
 }
 
 /*header of web*/
 .days {
-    background-color: gray;
-
+    background-color: #d9d9d9;
+    width: 100%;
 }
 
 .days ul {
@@ -94,6 +94,8 @@ form {
     grid-template-columns: repeat(7, 1fr);
     list-style: none;
     padding-right: 0;
+    margin: 0;
+
 }
 
 .days li {
@@ -103,18 +105,24 @@ form {
     justify-content: center;
     align-items: center;
 }
+.days li p {
+    margin: 0 0 5px 0;
+}
  .count{
-     width: 50px;
-     height: 50px;
+     width: 25px;
+     height: 25px;
      border-radius: 50%;
-     background-color: #1ac185;
+     background-color: rgba(217, 217, 217, 0.4);
+     margin-bottom: 2px;
+     text-align: center;
  }
 
  footer {
      position: fixed;
      bottom: 0;
+     right: 0;
      background-color: #D9D9D9;
-     width: 98vw;
+     width: 99vw;
      padding: 10px;
      display: flex;
      align-items: center;
@@ -122,11 +130,70 @@ form {
  }
  footer input {
      padding: 10px;
+     border-radius: 5px;
+     border: none;
+     outline: none;
  }
  #todo {
-     width: 50%;
+     width: 70%;
  }
  #time {
      width: 5%;
-     margin: 0 40px 0 20px;
+     margin: 0 20px 0 40px;
+     text-align: center;
  }
+ #addBtn {
+     border: none;
+     border-radius: 5px;
+     outline: none;
+     width: 10%;
+     padding: 10px;
+     background-color: #1ac185;
+     color: white;
+     margin-left: 10px;
+ }
+ /*main section*/
+main {
+    padding: 20px;
+}
+.container {
+
+}
+.greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todoList ul{
+    width: 100%;
+    list-style: none;
+    padding-right: 0;
+}
+.todoList ul li {
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.todoList ul li:first-child {
+    display: none;
+}
+.todoList .time {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 40px;
+}
+.todoList .text {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input[type=checkbox] {
+    margin: 0 0 0 10px;
+}

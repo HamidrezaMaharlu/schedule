@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,40 +33,62 @@
 </div>
 <div class="days">
     <ul>
-        <li>
+        <li class="shanbe">
             <p>شنبه</p>
-            <p class="count"></p>
+            <p class="count" id="shanbe">0</p>
         </li>
-        <li>
+        <li class="yekshanbe">
             <p>یکشنبه</p>
-            <p class="count"></p>
+            <p class="count" id="yekshanbe">0</p>
         </li>
-        <li>
+        <li class="doshanbe">
             <p>دوشنبه</p>
-            <p class="count"></p>
+            <p class="count" id="doshanbe">0</p>
         </li>
-        <li>
+        <li class="sehshanbe">
             <p>سه شنبه</p>
-            <p class="count"></p>
+            <p class="count" id="sehshanbe">0</p>
         </li>
-        <li>
+        <li class="charshanbe">
             <p>چهارشنبه</p>
-            <p class="count"></p>
+            <p class="count" id="charshanbe">0</p>
         </li>
-        <li>
+        <li class="panjshanbe">
             <p>پنج شنبه</p>
-            <p class="count"></p>
+            <p class="count" id="panjshanbe">0</p>
         </li>
-        <li>
+        <li class="jomeh">
             <p>جمعه</p>
-            <p class="count"></p>
+            <p class="count" id="jomeh">0</p>
         </li>
     </ul>
 </div>
-<main></main>
+<main>
+    <div class="container">
+        <div class="greeting">
+            <i class="bi bi-trash deleteAll"></i>
+        </div>
+        <div class="todoList">
+            <ul class="todoList--ul">
+                <li class="li">
+                    <div class="text">
+                        <div>
+                            <input type="checkbox" id="done">
+                            <label id="task" for="done">salam</label>
+                        </div>
+                        <input class="time" type="text" value="18:00">
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-trash" onclick="del(event)"></i>&nbsp;&nbsp;<i class="bi bi-pencil"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
 <footer>
     <input id="todo" type="text">
-    <input id="time" type="text" placeholder="18:00">
+    <input id="time" type="text" value="18:00">
     <button id="addBtn" type="submit"> افزودن</button>
 </footer>
 <script src="main.js"></script>
