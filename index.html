@@ -24,11 +24,22 @@
                 <span></span>
             </div>
             <div>
-                <input id="phone" type="text" placeholder=" موبایل  091xx " required pattern="[0]{1}[0-9]{10}">
+                <input id="phone" type="text" placeholder=" موبایل  091xx " required pattern="[0]{1}[9]{1}[0-9]{9}">
                 <span></span>
             </div>
             <button id="loginBtn" type="submit">ورود</button>
         </form>
+    </div>
+</div>
+<div class="modall edit">
+    <div class="modal-content">
+<!--        <form>-->
+            <div>
+                <input id="editTxt" type="text" required minlength="4" maxlength="20">
+                <span></span>
+            </div>
+            <button id="editBtn" onclick="sabt()" >ثبت</button>
+<!--        </form>-->
     </div>
 </div>
 <div class="days">
@@ -73,13 +84,13 @@
                 <li class="li">
                     <div class="text">
                         <div>
-                            <input type="checkbox" id="done">
-                            <label id="task" for="done">salam</label>
+                            <input type="checkbox" id="done" onclick="done(event)">
+                            <label id="task" >salam</label>
                         </div>
                         <input class="time" type="text" value="18:00">
                     </div>
                     <div class="icon">
-                        <i class="bi bi-trash" onclick="del(event)"></i>&nbsp;&nbsp;<i class="bi bi-pencil"></i>
+                        <i class="bi bi-trash" onclick="del(event)"></i>&nbsp;&nbsp;<i class="bi bi-pencil" onclick="edit(event)"></i>
                     </div>
                 </li>
             </ul>
@@ -89,7 +100,7 @@
 <footer>
     <input id="todo" type="text">
     <input id="time" type="text" value="18:00">
-    <button id="addBtn" type="submit"> افزودن</button>
+    <button id="addBtn" type="submit" onclick="add(event)"> افزودن</button>
 </footer>
 <script src="main.js"></script>
 </body>

@@ -16,6 +16,18 @@ body {
     justify-content: center;
     align-items: center;
 }
+.modall {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Modal Content Box */
 .modal-content {
@@ -55,6 +67,31 @@ body {
     content: "✔";
     color: green;
 }
+/*validate edit*/
+.modall input + span {
+    position: relative;
+}
+
+.modall input + span::before {
+    position: absolute;
+    font-size: 12px;
+    top:30px;
+    right:-30px
+}
+
+.modall input:invalid {
+    border: 2px solid red;
+}
+
+.modall input:invalid + span::before {
+    content: "❌";
+    color: red;
+}
+
+.modall input:valid + span::before {
+    content: "✔";
+    color: green;
+}
 
 
 /*form*/
@@ -82,7 +119,23 @@ form {
     border: none;
     border-radius: 5px;
 }
+.edit input {
+    margin: 8px;
+    border: none;
+    width: 80%;
+    padding: 8px 5px;
+    border-radius: 5px;
+    outline: none;
+}
 
+.edit button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #1ac185;
+    border: none;
+    border-radius: 5px;
+}
 /*header of web*/
 .days {
     background-color: #d9d9d9;
@@ -178,6 +231,16 @@ main {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+.todoList ul li.isDone {
+    background-color: #1ac185;
+}
+.todoList ul li.isDone #task{
+    text-decoration: line-through;
+}
+.todoList ul li.isDone #done:checked{
+    color: violet;
+}
+
 .todoList ul li:first-child {
     display: none;
 }
