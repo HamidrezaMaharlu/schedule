@@ -47,8 +47,6 @@ loginBtn.addEventListener("click", (event) => {
         document.querySelector(".yekshanbe").setAttribute("style", "border:none;background-color:white");
         loginModal.style.display = "none"
         selectDay()
-
-
     }
 })
 
